@@ -13,7 +13,7 @@ public interface ICategoryService {
 	
 	public ResponseEntity<CategoryResponseRest> searchById (Long id);
 	
-	// esta es la interfas 
+	// esta es la interfaz 
 	public ResponseEntity<CategoryResponseRest> save (Category category);
 	
 }
