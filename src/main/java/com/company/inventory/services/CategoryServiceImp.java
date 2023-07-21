@@ -109,9 +109,10 @@ public class CategoryServiceImp implements ICategoryService{
 			if (categorySaved != null) {
 				List.add(categorySaved);
 				response.getCategoryResponse().setCategory(List);
+				response.setMetadata("Rspuesta ok","00","Categoria guardada ");
 			}else {
 				response.setMetadata("Rspuesta nok","-1","Categoria no guardada ");
-				
+				return new ResponseEntity<CategoryResponseRest>(response, HttpStatus.BAD_REQUEST);
 			}
 		}catch (Exception e) {
 			response.setMetadata("Rspuesta nok","-1","Error al guardar la categoria ");
